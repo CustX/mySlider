@@ -127,12 +127,18 @@
   border: 1px solid #C8D9FB;
   padding: 20px;
   line-height: 22px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .item:first-child {
   margin-left: 0;
 }
 .item:last-child {
   margin-right: 0;
+}
+.item:hover {
+  border: 1px solid #527CCD;
+  cursor: pointer;
 }
 .item .date {
   font-size: 12px;

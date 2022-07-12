@@ -107,11 +107,16 @@ $border-active: #527CCD;
 	border: 1px solid $border;
 	padding: 20px;
 	line-height: 22px;;
+	transition: .3s;
 	&:first-child {
 		margin-left: 0;
 	}
 	&:last-child {
 		margin-right: 0;
+	}
+	&:hover {
+		border: 1px solid $border-active;
+		cursor: pointer;
 	}
 	.date {
 		font-size:12px;
