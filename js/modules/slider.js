@@ -2,7 +2,7 @@ const track = $('.track'); //Прокручиваемый элемент
 const progressLine = $('.progress-line'); //Линия, показывающая прогресс
 const items = $('.item'); //Массив слайдов
 const slideWitdh = $('.item').eq(1).outerWidth(true); //Ширина слайдов
-const progressBarWidth = $('.progress-bar').outerWidth(); //Ширина прогресс бара
+let progressBarWidth = $('.progress-bar').outerWidth(); //Ширина прогресс бара
 let pages = Math.ceil(items.length - 4); //Количество доступных перемещений до упора
 
 let currentPage = 0; // Текущая страница
@@ -23,6 +23,7 @@ export function move(e){
 	}else {
 		pages = Math.ceil(items.length - 4);
 	}
+	progressBarWidth = $('.progress-bar').outerWidth();
 	progressLineWidth = progressBarWidth/(pages+1) // Ширина линии прогресса
 	setProgressLine()
 }
